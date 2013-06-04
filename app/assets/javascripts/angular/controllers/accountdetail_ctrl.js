@@ -15,4 +15,9 @@ app.controller('AccountDetailCtrl', function($scope, $routeParams, Account) {
     $scope.mode = 'display'; 
   }  
 
+  $scope.update = function() {
+    $scope.mode = 'display'; 
+    Account.update({id:$routeParams.id}, $scope.account);
+  }    
+
 });

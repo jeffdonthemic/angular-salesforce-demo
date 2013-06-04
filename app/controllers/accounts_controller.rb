@@ -21,8 +21,8 @@ class AccountsController < ApplicationController
   end		
 
   def update
-    # :ok
-    respond_with client.query('select id, name from account limit 1').first
+    client.update!('Account', Id: params[:account][:Id], Name: params[:account][:Name], Type: params[:account][:Type])
+    respond_with client.query("select id, name from account where id ='#{params[:account][:Id]}'")
   end		
 
 	private

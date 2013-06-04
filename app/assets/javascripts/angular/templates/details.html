@@ -11,10 +11,10 @@
 
 <span ng-show="mode == 'edit'">
 
-  <form  name="editForm" ng-submit="save()">
-    Name:  <input type="text" name="accountName" ng-model="account.Name" required>
-    <span class="error" ng-show="editForm.accountName.$error.required">Required!</span><br/>
-    Type:  <input type="text" ng-model="account.Type"><br/>
+  <form  name="editForm" ng-submit="update()">
+    Name:  <input type="text" ng-model="account.Name" required>
+      <span class="error" ng-show="editForm.accountName.$error.required">Required!</span><br/>
+    Type:  <input type="text" ng-model="account.Type" required><br/>
     <input type="submit" value="Save"> <input type="button" value="Cancel" ng-click="cancel()">
   </form>
 
