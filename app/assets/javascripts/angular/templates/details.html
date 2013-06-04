@@ -1,0 +1,23 @@
+<a href="/">back</a>
+
+<div ng-controller="AccountDetailCtrl">
+
+<h1>{{account.Name}}</h1>
+
+<span ng-show="mode == 'display'">
+{{account.Type}}
+<p><a href="" ng-click="edit(account)">Edit</a></p>
+</span>
+
+<span ng-show="mode == 'edit'">
+
+  <form  name="editForm" ng-submit="save()">
+    Name:  <input type="text" name="accountName" ng-model="account.Name" required>
+    <span class="error" ng-show="editForm.accountName.$error.required">Required!</span><br/>
+    Type:  <input type="text" ng-model="account.Type"><br/>
+    <input type="submit" value="Save"> <input type="button" value="Cancel" ng-click="cancel()">
+  </form>
+
+</span>
+
+</div>

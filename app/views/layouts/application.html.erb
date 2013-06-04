@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="Demo">
+<html lang="en" ng-app="app">
 <head>
   <title>Angular Salesforce Demo</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+  <div ng-view="ng-view"></div>
+</div>
 </body>
 </html>
