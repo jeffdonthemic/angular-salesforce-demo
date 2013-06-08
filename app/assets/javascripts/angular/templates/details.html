@@ -1,21 +1,47 @@
-<a href="/">back</a>
+<a class="btn" href="/#" style="margin-top:15px;margin-bottom:15px"><i class="icon-home"></i> Back</a>
 
 <div ng-controller="AccountDetailCtrl">
 
 <h1>{{account.Name}}</h1>
 
 <span ng-show="mode == 'display'">
-{{account.Type}}
-<p><a href="" ng-click="edit(account)">Edit</a></p>
+
+  <table class="table" style="width:50%">
+    <tbody>
+    <tr>
+      <td width="20%">Type:</td>
+      <td>{{account.Type}}</td>
+    </tr>
+    <tr>
+      <td>State:</td>
+      <td>{{account.BillingState}}</td>
+    </tr>    
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>      
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-primary" ng-click="edit(account)">Edit Account</button>
 </span>
 
 <span ng-show="mode == 'edit'">
 
   <form  name="editForm" ng-submit="update()">
-    Name:  <input type="text" ng-model="account.Name" required>
-      <span class="error" ng-show="editForm.accountName.$error.required">Required!</span><br/>
-    Type:  <input type="text" ng-model="account.Type" required><br/>
-    <input type="submit" value="Save"> <input type="button" value="Cancel" ng-click="cancel()">
+    <fieldset>
+    <legend>Edit Account</legend>
+
+    <label>Account name</label>
+    <input type="text" ng-model="account.Name" required><br/>
+
+    <label>Type</label>
+    <input type="text" ng-model="account.Type" required><br/>
+
+    <button type="submit" class="btn btn-primary">Submit</button> 
+    <button type="button" class="btn"  ng-click="cancel()">Cancel</button>
+
+    </fieldset>
   </form>
 
 </span>
