@@ -1,11 +1,11 @@
 <h1>AngularJS Demo with Salesforce.com</h1>
 
-<span class="lead" style="padding-bottom:10px">By Jeff Douglas (<a href="http://www.twitter.com/jeffdonthemic" target="_blank">@jeffdonthemic</a>). You can find the accompanying blog post at <a href="http://blog.jeffdouglas.com" target="_blank">blog.jeffdouglas.com</a>. This demo connects to Salesforce.com using Ruby on Rails. The application allows you to create, update and display Account records from Salesforce.com.</span>
+<span class="lead" style="padding-bottom:10px">By Jeff Douglas (<a href="http://www.twitter.com/jeffdonthemic" target="_blank">@jeffdonthemic</a>). You can find the accompanying blog post at <a href="http://blog.jeffdouglas.com/?p=4800" target="_blank">blog.jeffdouglas.com</a>. This demo connects to Salesforce.com using Ruby on Rails. The application allows you to create, update and display Account records from Salesforce.com.</span>
 
 <div ng-controller="AccountListCtrl">
 
   <h2>Create a New Account</h2>
-  <form name="foo" ng-submit="add()">
+  <form name="frm" ng-submit="add()">
     <input type="text" class="input-xlarge" ng-model="newAccount.name" required><br/>
     <button type="Submit" class="btn btn-primary">Add Account</button>
   </form><br/>
@@ -21,7 +21,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="account in accounts" ng-click="displayAcount(account)">
+    <tr ng-repeat="account in accounts">
       <td><a href="#/accounts/{{account.Id}}">{{account.Name}}</a></td>
       <td>{{account.Type}}</td>
       <td>{{account.BillingState}}</td>
