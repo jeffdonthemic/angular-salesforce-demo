@@ -29,6 +29,25 @@ If all is setup correctly, you should be able to start the application with:
 
 Now point your browser to http://localhost:3000/accounts.json and you should see your 5 most recently updated Accounts from your DE org.
 
+## Deploy to Heroku
+
+    # create your application on heroku
+    heroku create [YOUR-APP-NAME]
+
+    # add all of your environment settings from the .env file
+    heroku config:add SFDC_CLIENT_ID=[YOUR-CLIENT-ID]
+    heroku config:add SFDC_CLIENT_SECRET=[YOUR-CLIENT-SECRET]
+    heroku config:add SFDC_HOST=login.salesforce.com
+    heroku config:add SFDC_USERNAME=[YOUR-USERNAME]
+    heroku config:add SFDC_PASSWORD=[YOUR-PASSWORD-AND-TOKEN]
+
+    # push your code to heroku
+    git push heroku master
+
+    # after the deploy completes, open your application
+    heroku open
+
+
 ## Contributors
 
 * [jeffdonthemic](https://github.com/jeffdonthemic)
