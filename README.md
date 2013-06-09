@@ -2,7 +2,7 @@
 
 This demo AngularJS application connects to Salesforce.com using Ruby on Rails and the [Restforce](https://github.com/ejholmes/restforce) gem. The application creates, updates and displays Account records from Salesforce.com.
 
-You can find the accompanying blog post here with complete details.
+You can [run the application](http://angularjs-salesforce.herokuapp.com) and/or [read the accompanying blog post](http://blog.jeffdouglas.com/?p=4800) with complete details.
 
 ## Requirements
 
